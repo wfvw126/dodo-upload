@@ -2,6 +2,7 @@
 import DodoUpload from './dodoUpload'
 import { createInterface } from 'readline/promises'
 
+
 const rl = createInterface({
     input: process.stdin,
     output: process.stdout
@@ -9,12 +10,12 @@ const rl = createInterface({
 
 const main = async () => {
     console.log(`>>> DoDo 文件上传获取文件直链工具 <<<
-${'-'.repeat(48)}
+${'-'。repeat(48)}
 1. 请登录 DoDo 网页版 https://www.imdodo.com/
 2. 通过 localStorage.getItem('token') 获取 token
 3. 通过 localStorage.getItem('uid') 获取 uid
 4. 根据下方提示输入内容
-${'-'.repeat(48)}\n`)
+${'-'。repeat(48)}\n`)
     const token = await rl.question('请输入 token: ')
     if (!token) throw new Error('token 不能为空')
     const uid = await rl.question('请输入 uid: ')
